@@ -1,20 +1,24 @@
 public class ActivateBubbleSort {
     public static void main(String[]args){
 
-        int[] arr = Sort.randIntArr(10);
+        BubbleSort object = new BubbleSort();
+        int [] copy = new int[10];
 
-        for(int i = 0; i < arr.length;i++){
-            arr[i] = (int)(Math.random()*10001);
+        for (int i = 0; i < copy.length; i ++){
+            copy[i] = (int)(Math.random()*1001);
         }
+
+
         System.out.println("Initial Array");
-        for (int i = 0; i < arr.length;i++){
-            System.out.println(""+arr[i]+"");
+        for (int i = 0; i < copy.length;i++){
+            System.out.println(""+copy[i]+"");
         }
 
-        BubbleSort.bubbleSort(arr);
+        object.bubbleSort(copy);
+
         System.out.println("Sorted Array");
-        for (int i = 0; i < arr.length;i++){
-            System.out.println(""+arr[i]+"");
+        for (int i = 0; i < copy.length;i++){
+            System.out.println(""+copy[i]+"");
         }
     }
 }
